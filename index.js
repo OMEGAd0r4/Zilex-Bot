@@ -37,7 +37,7 @@ bot.on('guildMemberAdd', (member) => {
 //ANTI-LINKS GUARDIAN
 bot.on('message', async message => {
     //blacklisted words
-    let blacklisted = ["www.", ".com", ".net"] //words put , after the word
+    let blacklisted = [] //words put , after the word
   
     //2 looking for words
     let foundInText = false;
