@@ -8,7 +8,7 @@ const bot = new commando.Client({
 //PLUGINS
 
 //BOT TOKEN
-bot.login('NTIzNzkxNTkxNjgxMjk0MzM3.Dveqhg.Ux_n_4eKpdXXySPqUbg_LA7McUo');
+bot.login(process.env.token);
 //BOT TOKEN
 
 //GETS THE BOT ONLINE
