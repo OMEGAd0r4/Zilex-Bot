@@ -32,3 +32,28 @@ bot.on('guildMemberAdd', (member) => {
         .setTitle("**New Member**")
         .setDescription(`:busts_in_silhouette:|**Greetings,** ${member}. Welcome to the **Zilex Network**.`)});
 })
+
+
+//ANTI-LINKS GUARDIAN
+bot.on('message', async message => {
+    //blacklisted words
+    let blacklisted = ["https", "http", "www.", ".com", ".net"] //words put , after the word
+  
+    //2 looking for words
+    let foundInText = false;
+    for (var i in blacklisted) { // loops through the blacklisted list
+      if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
+    }
+    // checks casesensitive words
+  
+    //3 deletes and send message
+      if (foundInText) {
+        message.delete();
+        message.channel.send(`The Zilex Guardian has caught ${message.author} sending website links and has been warned`)
+        bot.channels.get('523814455205822496').send({embed: new Discord.RichEmbed()
+            .setDescription("**Link | Information**")
+            .addField("**Link User**", message.author)
+            .addField("**Link sent**", message.content)})
+    }
+});
+//ANTI-LINKS GUARDIAN
