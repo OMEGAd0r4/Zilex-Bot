@@ -27,7 +27,7 @@ class helpopCommand extends commando.Command {
           .addField("->", ">helpop [request]")});
 
             var requestembed = new Discord.RichEmbed()
-            .setDescription('**Request | Information**')
+            .setTitle('**Request | Information**')
             .setColor("#4286f4")
             .addField('**Request By**', `${message.author} with the ID: ${message.author.id}`)
             .addField('**User Request**', requestmessage)
