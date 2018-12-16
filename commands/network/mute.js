@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const commando = require('discord.js-commando')
-const prefix = "/";
+const prefix = ">";
 const bot = new commando.Client({
   commandPrefix: prefix
 });
