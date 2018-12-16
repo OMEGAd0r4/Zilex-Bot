@@ -51,7 +51,7 @@ bot.on('message', async message => {
         message.delete();
         message.channel.send(`The Zilex Guardian has caught ${message.author} sending website links and has been warned`)
         bot.channels.get('523814455205822496').send({embed: new Discord.RichEmbed()
-            .setDescription("**Link | Information**")
+            .setTitle("**Link | Information**")
             .addField("**Link User**", message.author)
             .addField("**Link sent**", message.content)})
     }
