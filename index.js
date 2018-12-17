@@ -37,7 +37,7 @@ bot.on('guildMemberAdd', (member) => {
 //ANTI-LINKS GUARDIAN
 bot.on('message', async message => {
     //blacklisted words
-    let blacklisted = [] //words put , after the word
+    let blacklisted = ["KYS"] //words put , after the word
   
     //2 looking for words
     let foundInText = false;
@@ -49,9 +49,9 @@ bot.on('message', async message => {
     //3 deletes and send message
       if (foundInText) {
         message.delete();
-        message.channel.send(`The Zilex Guardian has caught ${message.author} sending website links and has been warned`)
+        message.channel.send(`The Zilex Guardian has caught ${message.author} being toxic.`)
         bot.channels.get('523814455205822496').send({embed: new Discord.RichEmbed()
-            .setTitle("**Link | Information**")
+            .setTitle("**Suicidal Influence | Information**")
             .addField("**Link User**", message.author)
             .addField("**Link sent**", message.content)})
     }
