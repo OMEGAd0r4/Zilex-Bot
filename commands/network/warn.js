@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const commando = require('discord.js-commando')
-const prefix = ">";
+const prefix = "/";
 const bot = new commando.Client({
   commandPrefix: prefix
 });
@@ -11,7 +11,7 @@ class warnCommand extends commando.Command{
   {
     super(client, {
       name: 'warn', 
-      group: 'network',
+      group: 'moderations',
       memberName: 'warn',
       description: "Warns a user"
     });
@@ -25,18 +25,17 @@ class warnCommand extends commando.Command{
           .setDescription(":x: **Missing args**")
           .setColor("#FF4040")
           .addField("->", "/warn [User] [Reason]")});
-     
+    
+        var supportteamerole = message.guild.roles.find(`name`, "SUPPORT_TEAM");
+        
+        if (!message.member.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to warn others");
+
+        if (warnUser.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to warn support team!");
+        
         if (!warnreason) return message.channel.send({embed: new Discord.RichEmbed()
           .setDescription(":x: **Missing args**")
           .setColor("#FF4040")
           .addField("->", "/warn [User] [Reason]")});
-          
-        var supportteamerole = message.guild.roles.find(`name`, "SUPPORT_TEAM");
-
-        
-        if (!message.member.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to warn others")
-
-        if (warnUser.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to warn support team!")
         
           var warnembed = new Discord.RichEmbed()
           .setColor("#4286f4")
@@ -57,4 +56,4 @@ class warnCommand extends commando.Command{
   }
 }
 
-module.exports = warnCommand;
+module.exports = warnCommand
