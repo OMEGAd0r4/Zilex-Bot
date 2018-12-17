@@ -39,7 +39,7 @@ class warnCommand extends commando.Command{
         
           var warnembed = new Discord.RichEmbed()
           .setColor("#4286f4")
-          .setDescription('**Warn | Information**')
+          .setTitle('**Warn | Information**')
           .setDescription(`${warnUser}, Warned by ${message.author}`)
           .addField(`**REASON:**`, warnreason)
 
