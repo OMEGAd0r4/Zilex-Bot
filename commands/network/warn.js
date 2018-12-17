@@ -25,7 +25,7 @@ class warnCommand extends commando.Command{
           .setDescription(":x: **Missing args**")
           .setColor("#FF4040")
           .addField("->", "/warn [User] [Reason]")});
-        if (!message.member.hasPermission("VIEW_AUDIT_LOG")) return message.channel.send("Insufficient permission. You do not have permission to warn other users!")
+     
         if (!warnreason) return message.channel.send({embed: new Discord.RichEmbed()
           .setDescription(":x: **Missing args**")
           .setColor("#FF4040")
