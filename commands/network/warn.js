@@ -31,7 +31,7 @@ class warnCommand extends commando.Command{
           .setColor("#FF4040")
           .addField("->", "/warn [User] [Reason]")});
           
-        var supportteamerole = message.guild.roles.find(`name`, "SUPPORT TEAM");
+        var supportteamerole = message.guild.roles.find(`name`, "SUPPORT_TEAM");
 
         
         if (!message.member.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to mute others")
