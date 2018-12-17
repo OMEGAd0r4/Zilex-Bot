@@ -28,9 +28,9 @@ class warnCommand extends commando.Command{
     
         var supportteamerole = message.guild.roles.find(`name`, "SUPPORT TEAM");
         
-        if (!message.member.roles.has(supportteamerole)) return message.channel.send("Insufficient permission. You do not have permission to warn others");
+        if (!message.member.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to warn others");
 
-        if (warnUser.roles.has(supportteamerole)) return message.channel.send("Insufficient permission. You do not have permission to warn support team!");
+        if (warnUser.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to warn support team!");
         
         if (!warnreason) return message.channel.send({embed: new Discord.RichEmbed()
           .setDescription(":x: **Missing args**")
