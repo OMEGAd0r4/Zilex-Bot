@@ -53,7 +53,7 @@ bot.on('message', async message => {
         bot.channels.get('523814455205822496').send({embed: new Discord.RichEmbed()
             .setTitle("**Suicidal Influence | Information**")
             .addField("**Link User**", message.author)
-            .addField("**Link sent**", message.content)})
+            .addField("**Message sent**", message.content)})
     }
 });
 //ANTI-LINKS GUARDIAN
