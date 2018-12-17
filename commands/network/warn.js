@@ -40,7 +40,7 @@ class warnCommand extends commando.Command{
           var warnembed = new Discord.RichEmbed()
           .setColor("#4286f4")
           .setDescription('**Warn | Information**')
-          .addField(`${warnUser},`, `Warned by ${message.author}`)
+          .setDescription(`${warnUser}, Warned by ${message.author}`)
           .addField(`**REASON:**`, warnreason)
 
           let logschannel = message.guild.channels.find(`name`, "logs");
