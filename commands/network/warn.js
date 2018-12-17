@@ -20,7 +20,7 @@ class warnCommand extends commando.Command{
   {
         var warnargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         var warnUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(warnargs[0]));
-        var tempmutereason = warnargs.join(" ").slice(27);
+        var warnreason = warnargs.join(" ").slice(27);
         if (!warnUser) return message.channel.send({embed: new Discord.RichEmbed()
           .setDescription(":x: **Missing args**")
           .setColor("#FF4040")
@@ -41,7 +41,8 @@ class warnCommand extends commando.Command{
           var warnembed = new Discord.RichEmbed()
           .setColor("#4286f4")
           .setDescription('**Warn | Information**')
-          .addField(`{warnUser},`, `Muted by{message.author}`)
+          .addField(`${warnUser},`, `Warned by ${message.author}`)
+          .addField(`**REASON:**`, warnreason)
 
           let logschannel = message.guild.channels.find(`name`, "logs");
           if(!logschannel) return message.channel.send("Couldn't find the logs channel");
