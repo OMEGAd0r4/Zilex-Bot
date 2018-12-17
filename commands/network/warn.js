@@ -34,9 +34,9 @@ class warnCommand extends commando.Command{
         var supportteamerole = message.guild.roles.find(`name`, "SUPPORT_TEAM");
 
         
-        if (!message.member.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to mute others")
+        if (!message.member.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to warn others")
 
-        if (warnUser.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to mute support team!")
+        if (warnUser.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to warn support team!")
         
           var warnembed = new Discord.RichEmbed()
           .setColor("#4286f4")
