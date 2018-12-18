@@ -29,7 +29,7 @@ class clearCommand extends commando.Command {
           message.channel.fetchMessages()
             .then(messages => {
               message.channel.bulkDelete(messages);
-              messagesDeleted = messages.array().length; // number of messages deleted
+              let messagesDeleted = messages.array().length; // number of messages deleted
   
               // Logging the number of messages deleted on both the channel and console.
               message.channel.sendMessage("Zelix bot has purged deleted a total "+messagesDeleted + " messages.");
