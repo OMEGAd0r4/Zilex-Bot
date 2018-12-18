@@ -1,3 +1,5 @@
+
+
 const Discord = require("discord.js");
 const commando = require('discord.js-commando')
 const prefix = ">";
@@ -23,16 +25,41 @@ class clearCommand extends commando.Command {
 
         if (!message.member.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to clear chats")
 
-        if (message.member.roles.has(supportteamerole.id)) {
-            message.channel.fetchMessages()
-               .then(function(list){
-                    message.channel.bulkDelete(list);
-                }, function(err){message.channel.send("ERROR: ERROR CLEARING CHAT CHANNEL.")})                        
+        if (message.channel.type == 'text') {
+          message.channel.fetchMessages()
+            .then(messages => {
+              message.channel.bulkDelete(messages);
+              messagesDeleted = messages.array().length; // number of messages deleted
+  
+              // Logging the number of messages deleted on both the channel and console.
+              message.channel.sendMessage("Zelix bot has purged deleted a total "+messagesDeleted + " messages.");
+              console.log('Deletion of messages successful. Total messages deleted: '+messagesDeleted)
+            })
+            .catch(err => {
+              console.log('Error while doing Bulk Delete');
+              console.log(err);
+            });
+
         }
     }
-}
+  }
+
 
 module.exports = clearCommand;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
