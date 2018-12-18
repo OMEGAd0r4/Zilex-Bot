@@ -23,14 +23,15 @@ class clearCommand extends commando.Command {
     {
         var supportteamerole = message.guild.roles.find(`name`, "SUPPORT TEAM");
 
+        let messagesDeleted = messages.array().length; // number of messages deleted
+
         if (!message.member.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to clear chats")
 
         if (message.channel.type == 'text') {
           message.channel.fetchMessages()
             .then(messages => {
               message.channel.bulkDelete(messages);
-              let messagesDeleted = messages.array().length; // number of messages deleted
-  
+ 
               // Logging the number of messages deleted on both the channel and console.
               message.channel.sendMessage("Zelix bot has purged deleted a total "+messagesDeleted + " messages.");
               console.log('Deletion of messages successful. Total messages deleted: '+messagesDeleted)
