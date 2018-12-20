@@ -18,6 +18,7 @@ class statusCommand extends commando.Command {
 
     async run(message)
     {
+        //npm install request --save
         var request = require("request");
         var mcIP = "zilex.us";
         var mcPort = "";
@@ -36,8 +37,17 @@ class statusCommand extends commando.Command {
                     .addField("Zilex.us is online with,", `${body.players.now} people playing`)
                     .setThumbnail("https://images-ext-1.discordapp.net/external/NKKFTtifMQP0ADT4Dw0BZd5fOEMHyd6NmrRznNTzm04/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/521027621589483542/db986c0e576e96cfe02c20ed7d814a69.png?width=487&height=487")})
             }
+            else{
+                message.channel.send({embed: new Discord.RichEmbed()
+                    .setTitle("**Status | Information**")
+                    .setColor("#4286f4")
+                    .addField("The Zilex Network is currently online with,", "-> 0 players")
+                    .setThumbnail("https://images-ext-1.discordapp.net/external/NKKFTtifMQP0ADT4Dw0BZd5fOEMHyd6NmrRznNTzm04/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/521027621589483542/db986c0e576e96cfe02c20ed7d814a69.png?width=487&height=487")})
+            }
         })
     }
 }
 
 module.exports = statusCommand;
+
+
