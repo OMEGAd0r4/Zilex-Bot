@@ -33,6 +33,7 @@ bot.on('guildMemberAdd', (member) => {
         .setDescription(`:busts_in_silhouette:|**Greetings,** ${member}. Welcome to the **Zilex Network**.`)});
 })
 
+
 //ANTI-WORD GUARDIAN
 bot.on('message', async message => {
     //blacklisted words
@@ -48,7 +49,7 @@ bot.on('message', async message => {
     //3 deletes and send message
       if (foundInText) {
         message.delete().catch(O_o=>{});
-        message.author.sendMessage("the word '**Zolux**' isn't allowed in the Zilex Network");
+        message.reply("the word '**Z o l u x**' isn't allowed in the Zilex Network");
     }
 });
 //ANTI-WORD GUARDIAN
