@@ -33,5 +33,25 @@ bot.on('guildMemberAdd', (member) => {
         .setDescription(`:busts_in_silhouette:|**Greetings,** ${member}. Welcome to the **Zilex Network**.`)});
 })
 
+//ANTI-WORD GUARDIAN
+bot.on('message', async message => {
+    //blacklisted words
+    let blacklisted = ["Zolux"] //words put , after the word
+  
+    //2 looking for words
+    let foundInText = false;
+    for (var i in blacklisted) { // loops through the blacklisted list
+      if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
+    }
+    // checks casesensitive words
+  
+    //3 deletes and send message
+      if (foundInText) {
+        message.delete().catch(O_o=>{});
+        message.author.sendMessage("the word '**Zolux**' isn't allowed in the Zilex Network");
+    }
+});
+//ANTI-WORD GUARDIAN
+
 
 
