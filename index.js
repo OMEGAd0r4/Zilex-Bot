@@ -34,10 +34,10 @@ bot.on('guildMemberAdd', (member) => {
 })
 
 
-//ANTI-LINKS GUARDIAN
+//ANTI-WORD GUARDIAN
 bot.on('message', async message => {
     //blacklisted words
-    let blacklisted = ["KYS"] //words put , after the word
+    let blacklisted = ["Zolux"] //words put , after the word
   
     //2 looking for words
     let foundInText = false;
@@ -49,11 +49,7 @@ bot.on('message', async message => {
     //3 deletes and send message
       if (foundInText) {
         message.delete();
-        message.channel.send(`The Zilex Guardian has caught ${message.author} being toxic.`)
-        bot.channels.get('523814455205822496').send({embed: new Discord.RichEmbed()
-            .setTitle("**Suicidal Influence | Information**")
-            .addField("**Link User**", message.author)
-            .addField("**Message sent**", message.content)})
+        message.author.sendMessage("Hey, the word '**Zolux**' isn't allowed in the Zilex Network")
     }
 });
-//ANTI-LINKS GUARDIAN
+//ANTI-WORD GUARDIAN
