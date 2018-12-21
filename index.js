@@ -49,7 +49,7 @@ bot.on('message', async message => {
     //3 deletes and send message
       if (foundInText) {
         message.delete();
-        message.author.sendMessage("Hey, the word '**Zolux**' isn't allowed in the Zilex Network")
+        message.reply("the word '**Zolux**' isn't allowed in the Zilex Network")
     }
 });
 //ANTI-WORD GUARDIAN
