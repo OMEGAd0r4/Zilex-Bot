@@ -12,7 +12,7 @@ class statusCommand extends commando.Command {
         name: 'status',
         group: 'network',
         memberName: 'status',
-        description: 'Shows the status of the Zilex Network'
+        description: 'Shows the status of the Zelix Network'
       });
     }
 
@@ -20,7 +20,7 @@ class statusCommand extends commando.Command {
     {
         //npm install request --save
         var request = require("request");
-        var mcIP = "zilex.us";
+        var mcIP = "zelix.us";
         var mcPort = "";
 
         var url = "http://mcapi.us/server/status?ip=" + mcIP + "&port" + mcPort;
@@ -29,20 +29,20 @@ class statusCommand extends commando.Command {
 
             body = JSON.parse(body);
             
-            var status = `The Zilex Network is currently offline`;
+            var status = `The Zelix Network is currently offline`;
             if(body.players.now){
                 message.channel.send({embed: new Discord.RichEmbed()
                     .setTitle("**Status | Information**")
                     .setColor("#4286f4")
-                    .addField("Zilex.us is online with,", `${body.players.now} people playing`)
-                    .setThumbnail("https://images-ext-1.discordapp.net/external/NKKFTtifMQP0ADT4Dw0BZd5fOEMHyd6NmrRznNTzm04/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/521027621589483542/db986c0e576e96cfe02c20ed7d814a69.png?width=487&height=487")})
+                    .addField("Zelix.us is online with,", `${body.players.now} people playing`)
+                    .setThumbnail("https://cdn.discordapp.com/attachments/516650665691578368/588379110255099914/logo.png")})
             }
             else{
                 message.channel.send({embed: new Discord.RichEmbed()
                     .setTitle("**Status | Information**")
                     .setColor("#4286f4")
-                    .addField("The Zilex Network is currently online with,", "-> 0 players")
-                    .setThumbnail("https://images-ext-1.discordapp.net/external/NKKFTtifMQP0ADT4Dw0BZd5fOEMHyd6NmrRznNTzm04/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/521027621589483542/db986c0e576e96cfe02c20ed7d814a69.png?width=487&height=487")})
+                    .addField("The Zelix Network is currently online with,", "-> 0 players")
+                    .setThumbnail("https://cdn.discordapp.com/attachments/516650665691578368/588379110255099914/logo.png")})
             }
         })
     }
