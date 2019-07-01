@@ -14,7 +14,7 @@ bot.login(process.env.token);
 //GETS THE BOT ONLINE
 bot.on('ready',function(){
     console.log(`Bot is now online!, with ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} guilds.`);
-    bot.user.setActivity(`Zilex Bot | >help`, { type: 'WATCHING' });
+    bot.user.setActivity(`Zelix Bot | >help`, { type: 'WATCHING' });
 });
 //GETS THE BOT ONLINE
 
