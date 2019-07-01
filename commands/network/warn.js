@@ -50,7 +50,7 @@ class warnCommand extends commando.Command{
 
         message.channel.send(`${warnUser} has been warned`)
 
-        warnUser.sendMessage(warnUser + " Hey you have been warned from the Zilex Network for the reason of " + '[' + warnreason + ']').catch()
+        warnUser.sendMessage(warnUser + " Hey you have been warned from the Zelix Network for the reason of " + '[' + warnreason + ']').catch()
 
         message.delete();
   }
