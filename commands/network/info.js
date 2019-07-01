@@ -13,7 +13,7 @@ class infoCommand extends commando.Command {
       name: 'info', 
       group: 'network',
       memberName: 'info',
-      description: "Information about the Zilex Network"
+      description: "Information about the Zelix Network"
     });
   }
 
@@ -22,12 +22,12 @@ class infoCommand extends commando.Command {
       message.channel.send({embed: new Discord.RichEmbed()
         .setTitle("**Information**")
         .setColor("#4286f4")
-        .addField("__Twitter__", "@USZilex")
-        .addField("__Website__", "www.zilex.us")
-        .addField("__Teamspeak__", "ts.zilex.us")
-        .addField("__Shop__", "zilex.buycraft.net")
-        .setFooter("Zilex Network | Created by dora#0843")
-        .setThumbnail("https://images-ext-1.discordapp.net/external/NKKFTtifMQP0ADT4Dw0BZd5fOEMHyd6NmrRznNTzm04/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/521027621589483542/db986c0e576e96cfe02c20ed7d814a69.png?width=487&height=487")})
+        .addField("__Twitter__", "@USZelix")
+        .addField("__Website__", "www.zelix.us")
+        .addField("__Teamspeak__", "ts.zelix.us")
+        .addField("__Shop__", "zelix.buycraft.net")
+        .setFooter("Zelix Network | Created by dora#0843")
+        .setThumbnail("https://cdn.discordapp.com/attachments/516650665691578368/588379110255099914/logo.png")})
   }
 }
 
