@@ -14,7 +14,7 @@ bot.login(process.env.token);
 //GETS THE BOT ONLINE
 bot.on('ready',function(){
     console.log(`Bot is now online!, with ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} guilds.`);
-    bot.user.setActivity(`Zuni`, { type: 'WATCHING' });
+    bot.user.setActivity(`zuni.cc | >status`, { type: 'PLAYING' });
 });
 //GETS THE BOT ONLINE
 
