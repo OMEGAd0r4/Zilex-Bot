@@ -20,11 +20,11 @@ class ipCommand extends commando.Command {
     {
         var ipEmbed = new Discord.RichEmbed()
             .setColor("#4286f4")
-            .setTitle("**Zelix | Information**")
-            .addField(":mailbox_with_no_mail: Server IP", "-> **eu.zelix.us**")
+            .setTitle("**Zuni | Information**")
+            .addField(":mailbox_with_no_mail: Server IP", "-> **zuni.cc**")
             .addField("``>IP to use this command. Requested by``", ` -> ${message.author}`)
-            .setFooter("Copyright© 2018 Zelix Network. Created by dora#0843")
-            .setThumbnail("https://images-ext-1.discordapp.net/external/NKKFTtifMQP0ADT4Dw0BZd5fOEMHyd6NmrRznNTzm04/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/521027621589483542/db986c0e576e96cfe02c20ed7d814a69.png?width=487&height=487")
+            .setFooter("Copyright© 2018 Zuni Network. Created by dora#0843")
+            .setThumbnail("https://cdn.discordapp.com/attachments/606702450409209878/609004091947089920/design-mascot-logo-with-free-revisions-and-vector-file.png")
 
         message.channel.send(ipEmbed);
     }
