@@ -12,7 +12,7 @@ class statusCommand extends commando.Command {
         name: 'status',
         group: 'network',
         memberName: 'status',
-        description: 'Shows the status of the Zelix Network'
+        description: 'Shows the status of the Zuni Network'
       });
     }
 
@@ -20,7 +20,7 @@ class statusCommand extends commando.Command {
     {
         //npm install request --save
         var request = require("request");
-        var mcIP = "zelix.us";
+        var mcIP = "zuni.cc";
         var mcPort = "";
 
         var url = "http://mcapi.us/server/status?ip=" + mcIP + "&port" + mcPort;
@@ -29,19 +29,19 @@ class statusCommand extends commando.Command {
 
             body = JSON.parse(body);
             
-            var status = `The Zelix Network is currently offline`;
+            var status = `The Zuni Network is currently offline`;
             if(body.players.now){
                 message.channel.send({embed: new Discord.RichEmbed()
                     .setTitle("**Status | Information**")
                     .setColor("#4286f4")
-                    .addField("Zelix.us is online with,", `${body.players.now} people playing`)
+                    .addField("Zuni.cc is online with,", `${body.players.now} people playing`)
                     .setThumbnail("https://cdn.discordapp.com/attachments/516650665691578368/588379110255099914/logo.png")})
             }
             else{
                 message.channel.send({embed: new Discord.RichEmbed()
                     .setTitle("**Status | Information**")
                     .setColor("#4286f4")
-                    .addField("The Zelix Network is currently online with,", "-> 0 players")
+                    .addField("The Zuni Network is currently online with,", "-> 0 players")
                     .setThumbnail("https://cdn.discordapp.com/attachments/516650665691578368/588379110255099914/logo.png")})
             }
         })
