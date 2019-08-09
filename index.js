@@ -30,7 +30,7 @@ bot.on('guildMemberAdd', (member) => {
     welcomechannel.send({embed: new Discord.RichEmbed()
         .setColor("#4286f4")
         .setTitle("**New Member**")
-        .setDescription(`:busts_in_silhouette:|**Greetings,** ${member}. Welcome to the **Zilex Network**.`)});
+        .setDescription(`:busts_in_silhouette:|**Greetings,** ${member}. Welcome to the **Zuni Network**.`)});
 })
 
 
