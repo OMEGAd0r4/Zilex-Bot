@@ -21,9 +21,9 @@ class ipCommand extends commando.Command {
         var ipEmbed = new Discord.RichEmbed()
             .setColor("#4286f4")
             .setTitle("**Zuni | Information**")
-            .addField(":mailbox_with_no_mail: Server IP", "-> **zuni.cc**")
+            .addField(":mailbox_with_no_mail: Server IP", "-> **aodus.org**")
             .addField("``>IP to use this command. Requested by``", ` -> ${message.author}`)
-            .setFooter("Copyright© 2018 Zuni Network. Created by dora#0843")
+            .setFooter("Copyright© 2018 Aodus Network. Created by dora#0843")
             .setThumbnail("https://cdn.discordapp.com/attachments/606702450409209878/609004091947089920/design-mascot-logo-with-free-revisions-and-vector-file.png")
 
         message.channel.send(ipEmbed);
