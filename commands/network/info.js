@@ -22,11 +22,11 @@ class infoCommand extends commando.Command {
       message.channel.send({embed: new Discord.RichEmbed()
         .setTitle("**Information**")
         .setColor("#4286f4")
-        .addField("__Twitter__", "@USZelix")
-        .addField("__Website__", "www.zelix.us")
-        .addField("__Teamspeak__", "ts.zelix.us")
-        .addField("__Shop__", "zelix.buycraft.net")
-        .setFooter("Zelix Network | Created by dora#0843")
+        .addField("__Twitter__", "@AudosNetwork")
+        .addField("__Website__", "www.audos.org")
+        .addField("__Teamspeak__", "ts.audos.org")
+        .addField("__Shop__", "store.audos.org")
+        .setFooter("Audos Network | Created by dora#0843")
         .setThumbnail("https://cdn.discordapp.com/attachments/516650665691578368/588379110255099914/logo.png")})
   }
 }
